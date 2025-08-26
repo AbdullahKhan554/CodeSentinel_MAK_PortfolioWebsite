@@ -31,4 +31,28 @@ function typeEffect() {
   }
   setTimeout(typeEffect, isDeleting ? 50 : 120);
 }
+
+
 typeEffect();
+
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const res = await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await res.json();
+    document.getElementById("formResponse").innerText = data.message;
+  } catch (err) {
+    document.getElementById("formResponse").innerText = "Something went wrong!";
+  }
+});
+

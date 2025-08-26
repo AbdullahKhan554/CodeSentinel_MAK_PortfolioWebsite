@@ -1,0 +1,27 @@
+{
+  "name": "codesentinel_portfoliowebsite",
+  "version": "1.0.0",
+  "description": "A modern, responsive, and interactive personal portfolio website built using HTML, CSS, and JavaScript.\r This portfolio is designed to showcase my About Me, Skills, Projects, and Contact sections in a clean and professional way.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullahKhan554/CodeSentinel_PortfolioWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdullahKhan554/CodeSentinel_PortfolioWebsite/issues"
+  },
+  "homepage": "https://github.com/AbdullahKhan554/CodeSentinel_PortfolioWebsite#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5"
+  }
+}
